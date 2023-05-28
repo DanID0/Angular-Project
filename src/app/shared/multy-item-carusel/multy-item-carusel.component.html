@@ -1,0 +1,20 @@
+<div class="main-carusel-container">
+  <div
+    class="sliders-container"
+    (mouseenter)="mouseEnter()"
+    (mouseleave)="mouseLeave()"
+    style="transform: translateX({{ slideTransform }}vw)"
+  >
+    <div
+      *ngFor="let item of slides"
+      class="slide"
+      style="width:{{ slideWidth }}vw;"
+    >
+      <img src="{{ item.img }}" style="height: {{ slideHeight }}rem;" />
+    </div>
+  </div>
+  <div class="carusel-buttons-container">
+    <button (click)="slidesMove(slideWidth)">left</button>
+    <button (click)="slidesMove(-slideWidth)">right</button>
+  </div>
+</div>

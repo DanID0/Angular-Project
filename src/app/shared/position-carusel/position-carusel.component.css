@@ -1,0 +1,107 @@
+.position-carusel-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 40rem;
+  width: 100%;
+  background: url("https://c.tenor.com/iU30VZVP4_cAAAAM/calatop-black-hole-black-hole.gif");
+  background-size: 100% 100%;
+  margin-bottom: 10rem;
+}
+
+.position-carusel-main-img-container {
+  position: absolute;
+  z-index: 15;
+  top: calc(50% - 15rem);
+  left: calc(50% - 15rem);
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-reflect: below -280px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  filter: invert(0%);
+}
+
+.position-carusel-main-img-container img {
+  width: 20rem;
+  height: 20rem;
+  animation: greyangular 7s linear infinite alternate;
+}
+
+.position-carusel-planet-img img {
+  width: 100%;
+  height: 100%;
+  animation: planets 7s linear infinite alternate;
+}
+.position-carusel-planet-img {
+  width: 8rem;
+  height: 8rem;
+  transition: all 5s linear;
+  position: absolute;
+}
+
+.position-carusel-planet-img.center {
+  top: calc(50% + 1rem);
+  left: calc(50% - 7rem);
+  z-index: 25;
+}
+.position-carusel-planet-img.left {
+  top: calc(50% - 13rem);
+  left: 20%;
+  z-index: 23;
+  width: 6rem;
+  height: 6rem;
+}
+.position-carusel-planet-img.right {
+  top: calc(50% - -7rem);
+  left: calc(80% - 8rem);
+  width: 6rem;
+  height: 6rem;
+  z-index: 23;
+}
+.position-carusel-planet-img.behind {
+  width: 0rem;
+  height: 0rem;
+  top: calc(50% - 4rem);
+  left: calc(50% - 4rem);
+  z-index: 0;
+}
+
+@keyframes greyangular {
+  from {
+    filter: invert(0%);
+  }
+  to {
+    filter: invert(10%);
+    filter: invert(20%);
+    filter: invert(30%);
+    filter: invert(40%);
+    filter: invert(50%);
+    filter: invert(60%);
+    filter: invert(70%);
+    filter: invert(80%);
+    filter: invert(90%);
+    filter: invert(100%);
+  }
+}
+@keyframes planets {
+  from {
+    width: 100%;
+    height: 100%;
+  }
+  to {
+    width: 90%;
+    height: 90%;
+    width: 80%;
+    height: 80%;
+    width: 70%;
+    height: 70%;
+    width: 60%;
+    height: 60%;
+    width: 50%;
+    height: 50%;
+    width: 40%;
+    height: 40%;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "userArr": [
+    { "name": "user", "password": "userCool" },
+    { "name": "admin", "password": "admin" }
+  ]
+}

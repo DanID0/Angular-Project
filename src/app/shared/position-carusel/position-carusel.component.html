@@ -1,0 +1,15 @@
+<div class="position-carusel-container">
+  <div class="position-carusel-main-img-container">
+    <img
+      src="https://angular.io/assets/images/logos/angular/angular_whiteTransparent.svg"
+    />
+  </div>
+  <div
+    class="position-carusel-planet-img {{ setImgClass(i) }}"
+    *ngFor="let item of slides; let i = index"
+  >
+    <img src="{{ item.img }}" />
+  </div>
+</div>
+<button (click)="move(false)">left</button>
+<button (click)="move(true)">right</button>

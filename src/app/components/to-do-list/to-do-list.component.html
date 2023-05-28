@@ -1,0 +1,35 @@
+<p><input type="text" #username /></p>
+
+<button
+  type="button"
+  class="btn"
+  (click)="addValueToToDoArray(username.value); username.value = ''"
+>
+  Clickme
+</button>
+<div
+  class="toDo-card-container"
+  *ngFor="let doing of toDoListArray; let i = index"
+>
+  <div class="toDo-card-name" *ngIf="i != isInput">{{ doing.name }}</div>
+  <div class="toDo-card-button-container">
+    <button
+      class="toDo-card-cancel-btn btn"
+      (click)="deleteValueInTaskArray(i)"
+    >
+      delete
+    </button>
+    <div *ngIf="i == isInput" style="display: flex">
+      <input type="text" #charge />
+      <button type="button" (click)="changeValueInTaskArray(i, charge.value)">
+        submit
+      </button>
+    </div>
+    <button
+      class="toDo-card-change-btn btn"
+      (click)="i != isInput ? showInput(i) : (isInput = -1)"
+    >
+      change
+    </button>
+  </div>
+</div>
